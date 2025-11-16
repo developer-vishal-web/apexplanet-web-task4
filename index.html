@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishal Chaurasia | Frontend Developer Portfolio</title>
+  <meta name="description" content="Vishu Ch portfolio: HTML, CSS, JS internship projects - portfolio, to-do app, and product list.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar" role="banner">
+    <div class="container">
+      <div class="brand">
+        <img src="logo.jpg" alt="VC logo" class="logo" /> Vishal Chaurasia<span class="dot">.</span>
+      </div>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="#portfolio" aria-current="page">Portfolio</a>
+        <a href="#todo">To-Do</a>
+        <a href="#products">Products</a>
+      </nav>
+      <button id="themeBtn" class="small-btn" aria-label="Toggle Dark Mode">🌙</button>
+    </div>
+  </header>
+
+  <main role="main">
+    <!-- Portfolio / Hero -->
+    <section id="portfolio" class="section hero" aria-labelledby="portfolio-title">
+      <div class="container hero-grid">
+        <div class="intro">
+          <h1 id="portfolio-title">Hi — I’m Vishal Chaurasia</h1>
+          <p class="lead">I build clean, user-friendly front-end apps with HTML, CSS and JavaScript. My internship required these three projects below.</p>
+          <div class="actions">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Responsive</span>
+            <span>Accessibility</span>
+          </div>
+        </div>
+        <aside class="profile card">
+          <img src="profile.jpeg" class="avatar" alt="Vishu Ch profile photo" />
+          <h3>Vishal Chaurasia</h3>
+          <p class="muted">Frontend Developer Intern</p>
+          <div class="profile-links">
+            <a href="https://github.com/developer-vishal-web" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://linkedin.com/in/vishal-chaurasia-06852b2a4" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Projects Summary -->
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">What I built</h2>
+        <p class="muted">Three small apps: portfolio, to-do list (saved in your browser), and a product list with filter & sorting. Each solves a real-world problem.</p>
+        <div class="grid cards">
+          <div class="card">
+            <h3>Portfolio</h3>
+            <p>Intro + contact + project list. Built for a professional online presence.</p>
+            <a class="btn small" href="#portfolio">Live</a>
+          </div>
+          <div class="card">
+            <h3>To-Do</h3>
+            <p>Add, edit, delete tasks. Data saved in localStorage for instant persistence.</p>
+            <a class="btn small" href="#todo">Try App</a>
+          </div>
+          <div class="card">
+            <h3>Products</h3>
+            <p>Product cards with filter (category) + sort (price, rating). Responsive UI for real use.</p>
+            <a class="btn small" href="#products">Test Filters</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <h2 id="contact-title">Contact</h2>
+          <p class="muted">A simple contact form demo. It won’t send emails but shows a message on submit.</p>
+          <form id="contactForm" class="form" aria-label="Contact form">
+            <label for="name">Name *</label>
+            <input id="name" type="text" required aria-required="true" placeholder="Your name">
+            <label for="email">Email *</label>
+            <input id="email" type="email" required aria-required="true" placeholder="you@example.com">
+            <label for="message">Message *</label>
+            <textarea id="message" rows="4" required aria-required="true" placeholder="Write a short message"></textarea>
+            <button class="btn" type="submit">Send</button>
+            <div id="formStatus" class="muted" aria-live="polite"></div>
+          </form>
+        </div>
+        <aside class="card info">
+          <h3>About me</h3>
+          <p class="muted">I like building small things that work well and are easy to use. Always learning, open to feedback and teams.</p>
+          <ul>
+            <li>Location: Deoria</li>
+            <li>Languages: English, Hindi</li>
+            <li>Open to internships</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- To-Do App -->
+    <section id="todo" class="section" aria-labelledby="todo-title">
+      <div class="container">
+        <h2 id="todo-title">To-Do App</h2>
+        <p class="muted">Add tasks below. Saved instantly in your browser. Tasks persist after refresh.</p>
+        <div class="todo card">
+          <form id="todoForm" class="todo-form">
+            <input id="todoInput" placeholder="Add a new task" autocomplete="off">
+            <button class="btn" type="submit">Add</button>
+          </form>
+          <ul id="todoList" class="todo-list" aria-label="Task list"></ul>
+          <div class="todo-footer">
+            <small id="todoCount">0 tasks</small>
+            <div class="todo-actions">
+              <button id="clearCompleted" class="ghost small">Clear completed</button>
+              <button id="clearAll" class="ghost small">Clear all</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="section" aria-labelledby="products-title-main">
+      <div class="container">
+        <h2 id="products-title-main">Products</h2>
+        <p class="muted">Try filters and sorting—the list updates instantly.</p>
+        <div class="controls">
+          <select id="filterCategory" aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="stationery">Stationery</option>
+            <option value="accessories">Accessories</option>
+          </select>
+          <select id="sortBy" aria-label="Sort by">
+            <option value="default">Default</option>
+            <option value="price-asc">Price: low → high</option>
+            <option value="price-desc">Price: high → low</option>
+            <option value="rating-desc">Rating: high → low</option>
+          </select>
+          <input id="searchProduct" placeholder="Search products..." aria-label="Search products">
+          <button id="resetFilter" class="ghost small">Reset</button>
+        </div>
+        <div id="productsGrid" class="products-grid">
+          <!-- Sample demo product cards for structure -->
+          <div class="product-card">
+            <img src="headphones.jpg" alt="Headphones" />
+            <h3>Headphones</h3>
+            <p class="muted">Electronics &nbsp;|&nbsp; ₹41 &nbsp;|&nbsp; ⭐ 4.8</p>
+          </div>
+          <div class="product-card">
+            <img src="notebook.jpg" alt="Notebook" />
+            <h3>Notebook</h3>
+            <p class="muted">Stationery &nbsp;|&nbsp; ₹11 &nbsp;|&nbsp; ⭐ 4.4</p>
+          </div>
+          <div class="product-card">
+            <img src="backpack.jpg" alt="Backpack" />
+            <h3>Backpack</h3>
+            <p class="muted">Accessories &nbsp;|&nbsp; ₹34 &nbsp;|&nbsp; ⭐ 4.5</p>
+          </div>
+          <div class="product-card">
+            <img src="mouse.jpg" alt="Mouse" />
+            <h3>Mouse</h3>
+            <p class="muted">Electronics &nbsp;|&nbsp; ₹14 &nbsp;|&nbsp; ⭐ 4.2</p>
+          </div>
+          <div class="product-card">
+            <img src="bottle.jpg" alt="Bottle" />
+            <h3>Bottle</h3>
+            <p class="muted">Accessories &nbsp;|&nbsp; ₹18 &nbsp;|&nbsp; ⭐ 4.7</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    Made for internship — Vishal Chaurasia © 2025
+    <span class="footer-links">
+      <a href="mailto:vishalchaurasia198@gmail.com" aria-label="Email Vishu"><img src="email.svg" alt="Email" /></a>
+      <a href="https://github.com/developer-vishal-web" target="_blank" rel="noopener" aria-label="GitHub"><img src="github.svg" alt="GitHub" /></a>
+      <a href="https://linkedin.com/in/vishal-chaurasia-06852b2a4" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="linkedin.svg" alt="LinkedIn" /></a>
+    </span>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

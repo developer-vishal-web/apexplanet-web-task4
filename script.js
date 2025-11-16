@@ -106,11 +106,11 @@ renderTodos();
 
 // === PRODUCTS DEMO (List/Filter/Sort/Search/Reset) ===
 const productsData = [
-  { name: "Headphones", category: "Electronics", price: 410, rating: 4.8, image: "headphones.jpg" },
-  { name: "Notebook", category: "Stationery", price: 110, rating: 4.4, image: "notebook.jpg" },
-  { name: "Backpack", category: "Accessories", price: 340, rating: 4.5, image: "backpack.jpg" },
-  { name: "Mouse", category: "Electronics", price: 140, rating: 4.2, image: "mouse.jpg" },
-  { name: "Bottle", category: "Accessories", price: 180, rating: 4.7, image: "bottle.jpg" }
+  { name: "Headphones", category: "Electronics", price: 41, rating: 4.8, image: "Images/headphones.jpg" },
+  { name: "Notebook", category: "Stationery", price: 11, rating: 4.4, image: "Images/notebook.jpg" },
+  { name: "Backpack", category: "Accessories", price: 34, rating: 4.5, image: "Images/backpack.jpg" },
+  { name: "Mouse", category: "Electronics", price: 14, rating: 4.2, image: "Images/mouse.jpg" },
+  { name: "Bottle", category: "Accessories", price: 18, rating: 4.7, image: "Images/bottle.jpg" }
 ];
 
 const productsGrid = document.getElementById('productsGrid');
@@ -158,7 +158,7 @@ function renderProducts() {
   products.forEach(p => {
   let card = document.createElement('div');
   card.className = "product-card";
-  let imgSrc = p.image; // now guaranteed to exist
+  let imgSrc = p.image;
   card.innerHTML = `
     <img src="${imgSrc}" alt="${p.name}">
     <h3>${p.name}</h3>
@@ -167,6 +167,7 @@ function renderProducts() {
   `;
   productsGrid.appendChild(card);
 });
+
 
 }
 
